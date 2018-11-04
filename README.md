@@ -85,4 +85,5 @@ ID: 1
 Bulbasaur has now been deleted
 ```
 
-
+## Good to knows/Bugs
+The program does not give any output for an event, if you wish to know if your data update has been successful you will need to look at the Pokémon list.
