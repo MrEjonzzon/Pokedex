@@ -13,7 +13,6 @@ As I mentioned above, this code may be used for other things than Pokémon, but 
 2. Within the database, create a table named "pokemon"
 3. Within the table, create these rows (name, type) in the follwing order:
 
-'''
 id, int #Also make this one Primary
 name, varchar(255)
 type1, varchar(255)
@@ -24,14 +23,14 @@ entry, text
 
 Once finished it should look something like this 
 
-'''
- 	1 	idPrimary 	int(11) 			No 	None 			Change Change 	Drop Drop 	
-	2 	name 	varchar(255) 	latin1_swedish_ci 		No 	None 			Change Change 	Drop Drop 	
-	3 	type1 	varchar(255) 	latin1_swedish_ci 		No 	None 			Change Change 	Drop Drop 	
-	4 	type2 	varchar(255) 	latin1_swedish_ci 		No 	None 			Change Change 	Drop Drop
-	5 	height_m 	float 			No 	None 			Change Change 	Drop Drop 	
-	6 	weight_kg 	float 			No 	None 			Change Change 	Drop Drop 	
-	7 	entry 	text 	latin1_swedish_ci 		No 	None 			Change Change 	Drop Drop 	
-'''
+```
+ 	1 	idPrimary 	int(11) 						
+	2 	name 	varchar(255) 	latin1_swedish_ci 				
+	3 	type1 	varchar(255) 	latin1_swedish_ci 					
+	4 	type2 	varchar(255) 	latin1_swedish_ci 				
+	5 	height_m 	float 							
+	6 	weight_kg 	float 						 	
+	7 	entry 	text 	latin1_swedish_ci 						
+```
 
-'''
+
