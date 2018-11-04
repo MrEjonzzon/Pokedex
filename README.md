@@ -3,9 +3,10 @@ A GUI that is used to present data from my Pokédex database in MySQL. The code 
 
 ## What you will need
 This program needs to connect to a MySQL database, in line 12 you may change the names to match your own database.
-Example:
+```
 self.connection = mysql.connector.connect(user="root", host="127.0.0.1", database="pokedex") #Change this to
 self.connection = mysql.connector.connect(user="yourusername", host="Your IP", database="databasename") #This
+```
 
 As I mentioned above, this code may be used for other things than Pokémon, but for simplicity I will tell you how to setup your database without having to change the code, should you wish to use it for other things you may do so later.
 
@@ -40,5 +41,13 @@ As I mentioned above, this code may be used for other things than Pokémon, but 
 		6 	weight_kg 	float 						 	
 		7 	entry 	text 	latin1_swedish_ci 						
 	```
-4. 
+
+#### Manipulating and presenting database data with GUI
+If your database has been correctly set up you should know be able to use the program "Pokedex.py", start off by making sure your MySQL database is on. Once the GUI is on, you will be presented with three different buttons.
+
+##### Show Pokémon
+This Button will open a new window with a scrollable list. If you click a Pokémon in that list you will be presented with its stats to the right. If you click on a new Pokémon the stats will update to match.
+
+
+
 
