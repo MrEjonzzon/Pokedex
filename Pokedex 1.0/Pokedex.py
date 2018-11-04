@@ -2,8 +2,10 @@ from tkinter import *
 from mysql.connector import errorcode
 import mysql.connector
 
+
 class Pokedex_Connection:
     """ Handles communication to database """
+
     def __init__(self):
         """ connects to database """
         try:
@@ -36,8 +38,10 @@ class Pokedex_Connection:
         """ Closes database """
         self.connection.close()
 
+
 class ListBox_Window:
     """ Class for List Window """
+
     def __init__(self, connection):
         """ Creates Window """
         window = Tk()
@@ -74,8 +78,10 @@ class ListBox_Window:
         self.stat_frame.pokemon = (pkm[2], pkm[3], pkm[4], pkm[5], pkm[6])  # Show Pokémon stats
         self.stat_frame.update_labels()
 
+
 class Pokemon_Stats:
     """ Frame for Pokémon stats """
+
     def __init__(self, root, type1, type2, height, weight, entry):
         self.frame = Frame(root)
         self.labels = []
@@ -95,6 +101,7 @@ class Pokemon_Stats:
         for i in range(5):
             self.labels[i].config(text=self.pokemon[i])
 
+
 def show_pokemon(event):
     """ Creates list window """
     window = ListBox_Window(Pokedex_Connection())
@@ -104,10 +111,13 @@ def add_new_pokemon(event):
     window = Tk()
 
     def add(event):
+        """ Adds entries within the fields """
         connection = Pokedex_Connection()
-        connection.add_pokemon(id_entry.get(), name_entry.get(), type1_entry.get(), type2_entry.get(), height_entry.get(), weight_entry.get(), entry_entry.get())
+        connection.add_pokemon(id_entry.get(), name_entry.get(), type1_entry.get(), type2_entry.get(),
+                               height_entry.get(), weight_entry.get(), entry_entry.get())
         connection.close()
 
+    """ GUI Styling """
     id = Label(window, text="ID")
     id.grid(row=0, sticky=E)
     id_entry = Entry(window)
@@ -149,10 +159,12 @@ def add_new_pokemon(event):
 
     window.mainloop()
 
+
 def delete_new_pokemon(event):
     window = Tk()
 
     def delete(event):
+        """ Deletes Pokémon through ID equal to what is given in entry """
         connection = Pokedex_Connection()
         connection.delete_pokemon(id_entry.get())
         connection.close()
@@ -166,7 +178,8 @@ def delete_new_pokemon(event):
     delete_button.grid(row=7, column=1)
     delete_button.bind("<Button-1>", delete)
 
-# Main Window
+
+""" Root Window """
 root = Tk()
 root.title("Pokédex")
 frame = Frame(root, height=400, width=300)
@@ -187,6 +200,5 @@ add_pokemon_button.bind("<Button-1>", add_new_pokemon)
 delete_pokemon_button = Button(frame, text="Delete Pokémon")
 delete_pokemon_button.place(x=30, y=205)
 delete_pokemon_button.bind("<Button-1>", delete_new_pokemon)
-
 
 root.mainloop()
