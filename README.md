@@ -42,10 +42,10 @@ As I mentioned above, this code may be used for other things than Pokémon, but 
 		7 	entry 	text 	latin1_swedish_ci 						
 	```
 
-#### Manipulating and presenting database data with GUI
+## Manipulating and presenting database data with GUI
 If your database has been correctly set up you should know be able to use the program "Pokedex.py", start off by making sure your MySQL database is on. Once the GUI is on, you will be presented with three different buttons.
 
-##### Show Pokémon
+### Show Pokémon
 This Button will open a new window with a scrollable list. If you click a Pokémon in that list you will be presented with its stats to the right. If you click on a new Pokémon the stats will update to match.
 
 
