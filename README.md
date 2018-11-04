@@ -48,6 +48,30 @@ If your database has been correctly set up you should know be able to use the pr
 ### Show Pokémon
 This Button will open a new window with a scrollable list. If you click a Pokémon in that list you will be presented with its stats to the right. If you click on a new Pokémon the stats will update to match.
 
+### Add Pokémon
+This button will open a new  window with 7 different entry fields. Enter your data and click "Add", the Pokémon should now have been added to the database. Type2 can be left empty if Pokémon has none, in practicality all fields can be left empty, but if so nothing will show once you try to look at it.
+
+```
+ID: 1
+Name: Bulbasaur
+Type1: Grass
+Type2: Poison
+Height: 0.7
+Weight: 6.9
+Entry: A strange seed was planted on its back at birth. The plant sprouts and grows with this POKéMON.
+
+```
+
+
+```
+ID: 25
+Name: Pikachu
+Type1: Electric
+Type2: 
+Height: 0.7
+Weight: 6.9
+Entry: When several of these POKéMON gather, their electricity could build and cause lightning storms.
+```
 
 
 
